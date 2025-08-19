@@ -6,6 +6,7 @@
         {
             // if > 50, return 0 
             if (subtotal < 0) throw new ArgumentOutOfRangeException(nameof(subtotal));
+            if (country == "IE" && subtotal >= 50) return 0m;
             if (country == "IE") return 4.99m;
             return 9.99m;
 
